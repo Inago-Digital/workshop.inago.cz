@@ -118,7 +118,7 @@ document.addEventListener("DOMContentLoaded", function () {
         const response = await fetch("https://email.hangerthem.com/send", {
           method: "POST",
           body: JSON.stringify({
-            to: "f.borisjuk@gmail.com",
+            to: "vladimir.wunsch@inago.cz",
             name: data.name,
             email: data.email,
             subject: "Nová rezervace",
