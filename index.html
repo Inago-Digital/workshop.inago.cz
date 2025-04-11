@@ -1,0 +1,363 @@
+<!DOCTYPE html>
+<html lang="cs" class="scroll-smooth">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Workshop komunikačních dovedností</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script src="script.js" defer></script>
+    <style>
+      body.menu-open {
+        overflow: hidden;
+      }
+    </style>
+  </head>
+  <body class="bg-white text-black font-sans">
+    <header
+      class="flex items-center justify-between p-3 border-b fixed w-full bg-white z-20 realtive"
+    >
+      <div class="flex items-center font-bold gap-2">
+        <img src="assets/logo.png" alt="Logo" class="h-10 w-auto" />
+        Workshop komunikačních dovedností
+      </div>
+      <button
+        id="mobile-menu-toggle"
+        class="flex flex-col gap-1.5 cursor-pointer md:hidden ml-auto"
+      >
+        <div class="h-1 w-8 bg-black rounded-full transition-all"></div>
+        <div class="h-1 w-8 bg-black rounded-full transition-all"></div>
+        <div class="h-1 w-8 bg-black rounded-full transition-all"></div>
+      </button>
+
+      <nav class="ml-auto">
+        <ul id="navigation" class="hidden md:flex space-x-6">
+          <li>
+            <a
+              href="#home"
+              class="hover:text-[rgb(255,65,87)] transition-colors"
+              >Domů</a
+            >
+          </li>
+          <li>
+            <a
+              href="#speakers"
+              class="hover:text-[rgb(255,65,87)] transition-colors"
+              >Řečníci</a
+            >
+          </li>
+          <li>
+            <a
+              href="#details"
+              class="hover:text-[rgb(255,65,87)] transition-colors"
+              >Detaily</a
+            >
+          </li>
+          <li>
+            <a
+              href="#contact"
+              class="hover:text-[rgb(255,65,87)] transition-colors"
+              >Kontakt</a
+            >
+          </li>
+        </ul>
+      </nav>
+
+      <nav>
+        <ul
+          id="mobile-navigation"
+          class="flex flex-col gap-4 absolute top-16 left-0 bg-white w-full h-screen items-center justify-center hidden md:hidden"
+        >
+          <li>
+            <a
+              href="#home"
+              class="hover:text-[rgb(255,65,87)] transition-colors text-3xl font-bold"
+              >Domů</a
+            >
+          </li>
+          <li>
+            <a
+              href="#speakers"
+              class="hover:text-[rgb(255,65,87)] transition-colors text-3xl font-bold"
+              >Řečníci</a
+            >
+          </li>
+          <li>
+            <a
+              href="#details"
+              class="hover:text-[rgb(255,65,87)] transition-colors text-3xl font-bold"
+              >Detaily</a
+            >
+          </li>
+          <li>
+            <a
+              href="#contact"
+              class="hover:text-[rgb(255,65,87)] transition-colors text-3xl font-bold"
+              >Kontakt</a
+            >
+          </li>
+        </ul>
+      </nav>
+    </header>
+
+    <div
+      id="mobile-menu-overlay"
+      class="fixed inset-0 bg-black opacity-0 pointer-events-none transition-opacity duration-300 z-10"
+    ></div>
+    <nav
+      id="mobile-menu"
+      class="md:hidden fixed top-0 pt-16 right-0 w-full max-w-xs bg-white h-screen transform translate-x-full transition-transform duration-300 ease-in-out z-10 shadow-lg"
+    >
+      <ul class="flex flex-col space-y-6 px-6 py-8">
+        <li>
+          <a
+            href="#home"
+            class="block py-2 text-lg font-medium hover:text-[rgb(255,65,87)] transition-colors"
+            >Domů</a
+          >
+        </li>
+        <li>
+          <a
+            href="#speakers"
+            class="block py-2 text-lg font-medium hover:text-[rgb(255,65,87)] transition-colors"
+            >Řečníci</a
+          >
+        </li>
+        <li>
+          <a
+            href="#details"
+            class="block py-2 text-lg font-medium hover:text-[rgb(255,65,87)] transition-colors"
+            >Detaily</a
+          >
+        </li>
+        <li>
+          <a
+            href="#contact"
+            class="block py-2 text-lg font-medium hover:text-[rgb(255,65,87)] transition-colors"
+            >Kontakt</a
+          >
+        </li>
+      </ul>
+    </nav>
+
+    <section
+      id="home"
+      class="relative flex flex-col md:flex-row bg-gray-100 min-h-screen justify-between items-center text-center bg-[url('assets/hero.png')] bg-cover bg-center"
+    >
+      <div class="absolute inset-0 bg-black opacity-50"></div>
+      <div
+        class="z-10 flex flex-col justify-center items-center flex-1 min-h-screen"
+      >
+        <h1 class="text-4xl text-white font-bold mb-4">
+          Workshop komunikačních dovedností
+        </h1>
+        <p class="text-lg text-white mb-8 z-10">
+          Přijďte se naučit, jak efektivně komunikovat a budovat značku na
+          sociálních sítích.
+        </p>
+        <a
+          href="#contact"
+          class="inline-block px-8 py-3 bg-[rgb(255,65,87)] text-white font-semibold rounded hover:bg-[rgb(255,65,87)] transition z-10"
+        >
+          Registrovat se
+        </a>
+      </div>
+      <div
+        class="flex flex-col justify-center items-center flex-1 bg-white p-6 h-screen z-10"
+      >
+        <img
+          src="assets/vojnar.png"
+          alt="Řečník 2"
+          class="w-32 h-32 rounded-full mx-auto mb-4 object-cover background-top"
+        />
+        <h3 class="text-2xl font-semibold">Petr Vojnar</h3>
+        <p class="text-gray-600 mb-4 text-lg">Hlavní řečník</p>
+        <p class="text-gray-700 text-lg mb-1 md:w-2/3">
+          Bojovat můžete buď <strong>cenou</strong> a&nbsp;nebo
+          <strong>hodnotou, </strong>kterou musíte umět skvěle odkomunikovat.
+          Spojení silného <strong>brandu</strong> s&nbsp;uměním
+          <strong>zaujmout</strong> a&nbsp;<strong>ovlivnit</strong> vede
+          k&nbsp;prodeji. <strong>Odbourejte</strong>
+          <strong>strach a&nbsp;nervozitu</strong>. Prodejte sebe, svoje služby
+          nebo myšlenky. Vystupování před publikem, kamerou, klienty, na
+          business klubech nebo natáčení na soc. sítě pro vás
+          <strong>už nikdy nebude problém</strong>.
+        </p>
+      </div>
+    </section>
+
+    <section class="py-16 container mx-auto px-4">
+      <h2 class="text-3xl font-bold text-center mb-8">Co se naučíš:</h2>
+      <ul class="max-w-2xl mx-auto space-y-4">
+        <li class="flex items-center">
+          <span
+            class="inline-block w-4 h-4 bg-[rgb(255,65,87)] rounded-full mr-4"
+          ></span>
+          <span>Jak postavit základní pilíře osobní nebo firemní značky</span>
+        </li>
+        <li class="flex items-center">
+          <span
+            class="inline-block w-4 h-4 bg-[rgb(255,65,87)] rounded-full mr-4"
+          ></span>
+          <span
+            >Jak si nastavit tone of voice a vizuální styl, který zaujme</span
+          >
+        </li>
+        <li class="flex items-center">
+          <span
+            class="inline-block w-4 h-4 bg-[rgb(255,65,87)] rounded-full mr-4"
+          ></span>
+          <span>Jak tvořit obsah, který buduje důvěru a prodává</span>
+        </li>
+        <li class="flex items-center">
+          <span
+            class="inline-block w-4 h-4 bg-[rgb(255,65,87)] rounded-full mr-4"
+          ></span>
+          <span>Jak najít a mluvit ke svému cílovému publiku</span>
+        </li>
+        <li class="flex items-center">
+          <span
+            class="inline-block w-4 h-4 bg-[rgb(255,65,87)] rounded-full mr-4"
+          ></span>
+          <span>Jak funguje algoritmus a co ovlivňuje dosah příspěvků</span>
+        </li>
+        <li class="flex items-center">
+          <span
+            class="inline-block w-4 h-4 bg-[rgb(255,65,87)] rounded-full mr-4"
+          ></span>
+          <span>Co dělat pro dlouhodobý růst značky, ne jen pro lajky</span>
+        </li>
+        <li class="flex items-center">
+          <span
+            class="inline-block w-4 h-4 bg-[rgb(255,65,87)] rounded-full mr-4"
+          ></span>
+          <span>Praktické tipy a triky z reálných kampaní</span>
+        </li>
+        <li class="flex items-center">
+          <span
+            class="inline-block w-4 h-4 bg-[rgb(255,65,87)] rounded-full mr-4"
+          ></span>
+          <span
+            >Nejčastější chyby, které značky na sítích dělají – a jak se jim
+            vyhnout</span
+          >
+        </li>
+      </ul>
+    </section>
+
+    <section id="speakers" class="py-16 bg-gray-50">
+      <div class="container mx-auto px-4">
+        <h2 class="text-3xl font-bold text-center mb-12">
+          Workshop o sociálních sítích
+        </h2>
+        <div
+          class="mx-auto w-full md:w-1/2 bg-white shadow rounded p-6 text-center"
+        >
+          <img
+            src="assets/wunsch.png"
+            alt="Řečník 1"
+            class="w-32 h-32 rounded-full mx-auto mb-4 object-cover"
+          />
+          <h3 class="text-xl font-semibold">Vladimír Wünsch</h3>
+          <p class="text-gray-600 mb-4">CEO Inago</p>
+          <p class="text-gray-700">
+            Sociální sítě už dávno nejsou jen o sdílení fotek z dovolené. Jsou
+            klíčovým nástrojem pro budování značky, důvěry i přímé prodeje. Ať
+            už jsi podnikatel, freelancer nebo firma, bez dobře postaveného
+            brandu tě konkurence převálcuje. Na této přednášce ti ukážu, jak na
+            to – prakticky, srozumitelně a bez zbytečných teorií.
+          </p>
+        </div>
+      </div>
+    </section>
+
+    <section id="details" class="py-16">
+      <div class="container mx-auto px-4">
+        <h2 class="text-3xl font-bold text-center mb-12">Detaily akce</h2>
+        <div class="flex flex-col md:flex-row justify-around text-center gap-8">
+          <div>
+            <div class="text-[rgb(255,65,87)] text-4xl mb-2">📅</div>
+            <h3 class="text-xl font-semibold mb-1">Kdy</h3>
+            <p class="text-gray-700">4. června 18:00</p>
+          </div>
+          <div>
+            <div class="text-[rgb(255,65,87)] text-4xl mb-2">📍</div>
+            <h3 class="text-xl font-semibold mb-1">Kde</h3>
+            <p class="text-gray-700">Pytloun Grandhotel Imperial</p>
+          </div>
+          <div>
+            <div class="text-[rgb(255,65,87)] text-4xl mb-2">💰</div>
+            <h3 class="text-xl font-semibold mb-1">Cena</h3>
+            <p class="text-gray-700">5990 Kč</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section id="contact" class="py-16 bg-gray-100">
+      <div class="container mx-auto px-4">
+        <h2 class="text-3xl font-bold text-center mb-8">Chci se přidat!</h2>
+        <form
+          class="max-w-xl mx-auto bg-white shadow rounded p-8"
+          id="contact-form"
+          data-contact-form
+        >
+          <div class="mb-4">
+            <label for="name" class="block text-gray-700 font-semibold mb-2"
+              >Jméno</label
+            >
+            <input
+              type="text"
+              id="name"
+              data-contact-form-input
+              name="name"
+              placeholder="Vaše jméno"
+              class="w-full border border-gray-300 rounded px-4 py-2 focus:outline-none focus:border-[rgb(255,65,87)]"
+            />
+          </div>
+          <div class="mb-4">
+            <label for="email" class="block text-gray-700 font-semibold mb-2"
+              >Email</label
+            >
+            <input
+              type="email"
+              id="email"
+              data-contact-form-input
+              name="email"
+              placeholder="Váš email"
+              class="w-full border border-gray-300 rounded px-4 py-2 focus:outline-none focus:border-[rgb(255,65,87)]"
+            />
+            <span
+              class="text-red-500 text-sm hidden"
+              id="email-error"
+              data-email-error
+            >
+              Neplatný email
+            </span>
+          </div>
+          <div class="mb-4">
+            <label for="telephone" class="block text-gray-700 font-semibold mb-2"
+              >Telefon</label
+            >
+            <input
+              type="tel"
+              id="telephone"
+              data-contact-form-input
+              name="telephone"
+              placeholder="Váš telefon"
+              class="w-full border border-gray-300 rounded px-4 py-2 focus:outline-none focus:border-[rgb(255,65,87)]"
+            />
+          </div>
+          <button
+            type="submit"
+            class="w-full bg-[rgb(255,65,87)] text-white py-2 rounded font-semibold hover:bg-[rgb(255,65,87)] transition disabled:opacity-50 disabled:cursor-not-allowed"
+            id="submit-button"
+            data-contact-form-submit
+            disabled
+          >
+            Odeslat
+          </button>
+        </form>
+      </div>
+    </section>
+  </body>
+</html>
